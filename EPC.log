@@ -1,0 +1,107 @@
+[2024-11-06T07:52:19.851Z] EPC server log initialized
+[2024-11-06T07:52:19.851Z] Version: 1.4.3
+[2024-11-06T07:52:19.851Z] Timezone offset: 300
+[2024-11-06T07:52:19.852Z] Log path: E:\Rockstar\Red Dead\Grand Theft Auto V\EPC\EPC.log
+[2024-11-06T07:52:19.852Z] Config:
+  useStopThePed: true
+  useLSPDFROwner: false
+  showCurrentID: true
+  autoShowCurrentID: true
+  warningColorsForPedCarSearch: true
+  arrestedWithWarrantChance: 0.2
+  arrestedWithoutWarrantChance: 0.05
+  additionalArrestChance: 0.1
+  citationChance: 0.4
+  additionalCitationChance: 0.4
+  probationChance: 0.25
+  paroleChance: 0.3
+  showCustomizationLink: false
+  replaceStaticWithCustomLanguage: false
+  port: 80
+  defaultMapZoom: 1.5
+  showCalloutPage: true
+  autoShowCalloutPage: false
+  updateCalloutPageInterval: 2000
+  clearCalloutPageTime: null
+  automaticIncidentReports: true
+  disableExternalCautions: false
+  newWindowWidth: 600
+  newWindowHeight: 400
+  newWindowSamePage: true
+  newWindowOffset: center
+  newWindowOffsetMarginX: 20
+  newWindowOffsetMarginY: 20
+[2024-11-06T07:52:19.853Z] Plugins:
+  AudioAlerts.1.4.2: 
+		Files: 
+			alert_0.mp3: 31809
+			alert_1.mp3: 33436
+			audioAlerts.js: 4714
+		Size: 69959
+		Enabled on load: false
+  TenCodes.1.4.2: 
+		Files: 
+			tenCodes.css: 724
+			tenCodes.js: 1441
+		Size: 2165
+		Enabled on load: false
+[2024-11-06T07:52:19.853Z] Data files:
+  callout.data: Default 0 Data 0
+  cars.json: Default 2 Data 2
+  carsCautions.data: Default 0 Data 0
+  court.json: Default 2 Data 2260
+  currentID.data: Default 0 Data 0
+  peds.json: Default 2 Data 1104
+  pedsCautions.data: Default 0 Data 0
+  shift.json: Default 33 Data 1654
+  worldCars.data: Default 0 Data 754
+  worldPeds.data: Default 0 Data 224
+[2024-11-06T07:52:19.853Z] EPC Directory:
+  [File] #start.bat
+  [File] arrestOptions.json
+  [File] citationOptions.json
+  [File] config.json
+  [Directory] customization
+  [Directory] data
+  [Directory] defaults
+  [File] EPC.log
+  [Directory] img
+  [Directory] imgDefaults
+  [File] index.js
+  [File] language.json
+  [File] licenseOptions.json
+  [Directory] main
+  [Directory] plugins
+[2024-11-06T07:52:19.862Z] Server listening on port 80
+[2024-11-06T07:52:21.176Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+[2024-11-06T07:53:45.315Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+[2024-11-06T07:54:12.263Z] Post request at: /post/updateCurrentShift
+[2024-11-06T07:54:12.264Z] Payload: {"start":1730879652262,"notes":"","courtCases":[],"incidents":[]}
+[2024-11-06T07:54:12.265Z] Responded with status code: 200
+[2024-11-06T07:54:14.692Z] Post request at: /post/updateCurrentShift
+[2024-11-06T07:54:14.693Z] Payload: {"start":1730879652262,"notes":"","courtCases":[],"incidents":[{"number":"24-74165","description":""}]}
+[2024-11-06T07:54:14.693Z] Responded with status code: 200
+[2024-11-06T07:54:22.513Z] Post request at: /post/updateCurrentShift
+[2024-11-06T07:54:22.513Z] Payload: {"start":1730879652262,"notes":"","courtCases":[],"incidents":[{"number":"24-74165","description":"Test"}]}
+[2024-11-06T07:54:22.513Z] Responded with status code: 200
+[2024-11-06T07:54:25.537Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+[2024-11-06T07:54:29.935Z] Post request at: /post/updateCurrentShift
+[2024-11-06T07:54:29.935Z] Payload: null
+[2024-11-06T07:54:29.935Z] Responded with status code: 200
+[2024-11-06T07:54:29.936Z] Post request at: /post/addShift
+[2024-11-06T07:54:29.936Z] Payload: {"start":1730879652262,"notes":"","courtCases":[],"incidents":[{"number":"24-74165","description":"Test"}],"end":1730879669932}
+[2024-11-06T07:54:29.937Z] Responded with status code: 200
+[2024-11-06T07:54:32.133Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+[2024-11-06T07:55:06.236Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+[2024-11-06T07:55:21.558Z] Post request at: /post/updateCourtDescription
+[2024-11-06T07:55:21.559Z] Payload: {"number":"SA57194019","description":"<br>"}
+[2024-11-06T07:55:21.559Z] Responded with status code: 200
+[2024-11-06T07:55:24.737Z] Post request at: /post/updateCourtDescription
+[2024-11-06T07:55:24.738Z] Payload: {"number":"SA57194019","description":"<br><div><br></div>"}
+[2024-11-06T07:55:24.738Z] Responded with status code: 200
+[2024-11-06T07:55:25.615Z] Post request at: /post/updateCourtDescription
+[2024-11-06T07:55:25.616Z] Payload: {"number":"SA57194019","description":"<div><br></div>"}
+[2024-11-06T07:55:25.616Z] Responded with status code: 200
+[2024-11-06T07:55:25.765Z] Post request at: /post/updateCourtDescription
+[2024-11-06T07:55:25.765Z] Payload: {"number":"SA57194019","description":""}
+[2024-11-06T07:55:25.766Z] Responded with status code: 200
