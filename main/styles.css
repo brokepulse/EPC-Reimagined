@@ -1,0 +1,1022 @@
+:root {
+  --background-color: rgb(20, 20, 20);
+  --second-background-color: rgb(32, 32, 32);
+  --main-color: white;
+  --accent-color: rgb(143, 143, 143);
+  --second-accent-color: rgb(124, 171, 207);
+  --second-accent-color-half: rgba(124, 171, 207, 0.5);
+  --warning-color: rgb(255, 74, 74);
+  --warning-color-half: rgba(255, 72, 72, 0.5);
+  --header-height: 50px;
+  --main-font: 'Source Code Pro', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Apply styles to webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 5px;              /* Width of the scrollbar */
+  height: 10px;             /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--second-accent-color);   /* Color of the scrollbar thumb */
+  border-radius: 10px;      /* Rounded corners on the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--second-accent-color-half);   /* Darker color when hovering over scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background-color); /* Background of the scrollbar track */
+  border-radius: 10px;       /* Rounded corners on the scrollbar track */
+}
+
+.error-box {
+  background-color: rgba(255, 72, 72, 0.24); /* Light red background */
+  border: 1px solid var(--warning-color); /* Red border */
+  color: var(--warning-color); /* Red text */
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Login Form Layout */
+#login-screen, #create-profile-screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--second-background-color);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 300px;
+}
+
+/* Vertical alignment for form elements */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  text-align: left;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+/* Unique styling for login and profile creation inputs */
+.login-input {
+  padding: 8px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: white;
+}
+
+/* Styling for buttons within login forms */
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px;
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.secondary-button {
+  background: none;
+  color: var(--accent-color);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.secondary-button:hover {
+  text-decoration: underline;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--main-color);
+  font-family: var(--main-font);
+  zoom: 0.9;
+}
+
+body button,
+body input {
+  font-family: var(--main-font);
+  border-radius: 5px;
+}
+
+.header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  height: var(--header-height);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center-align everything in the header */
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  gap: 50px;
+  height: 20px;
+}
+
+/* Positioning for Logout and User Info */
+.logout {
+  position: absolute;
+  left: 15px; /* Aligns Logout to the far left */
+}
+
+.user-info {
+  position: absolute;
+  right: 15px; /* Aligns Logged in as to the far right */
+}
+
+/* Centered Main Buttons */
+.main-buttons {
+  background-color: var(--second-background-color);
+}
+
+/* Header button styling */
+.header-button-user {
+  padding: 0 0px;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  color: var(--accent-color);
+  cursor: default;
+  transition: 50ms linear;
+}
+
+.header-button-logout {
+  padding: 0 0px;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: 50ms linear;
+}
+
+.header-button-logout:hover,
+.header-button-logout:focus,
+.header-button-logout.selected {
+  color: var(--warning-color-half);
+}
+
+
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.group-time {
+  background-color: var(--second-background-color);
+  border-radius: 5px; /* Optional: Rounded corners */
+  padding: 5px 15px; /* Padding for inside the border */
+  display: flex;
+  align-items: center;
+}
+
+.time-display {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--main-color);
+  text-align: center;
+  min-width: 100px;
+  margin: 0 50px; /* Adjust this value to control spacing */
+}
+
+.icon {
+  height: 35px;
+}
+
+.icon path {
+  fill: var(--accent-color); /* Default icon color */
+  transition: fill 0.3s ease;
+}
+
+.header button:not(.logout) {
+  padding: 0 20px;
+  margin: 0;
+  border: none;
+  outline: none;
+  border-top: 4px solid transparent;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--second-background-color);
+  color: var(--accent-color);
+  position: relative; /* Required for the pseudo-element positioning */
+  transition: color 50ms linear;
+}
+
+/* Styles for hover, focus, and selected states */
+.header button:not(.logout):hover .icon path,
+.header button:not(.logout):focus .icon path,
+.header button:not(.logout).selected .icon path{
+  fill: var(--second-accent-color-half);
+}
+
+.header button:not(.logout).notification::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: var(--warning-color);
+  position: absolute;
+  animation: infinite headerButtonNotification 0.8s linear(0 0%, 0 100%);
+}
+
+
+
+@keyframes headerButtonNotification {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.content {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - var(--header-height) - 40px); /* Adjust height to include spacing */
+  top: calc(var(--header-height) + 40px); /* Adjust top to move down by 40px */
+}
+
+.content > * {
+  width: 100%;
+  height: 100%;
+}
+
+.mapPage iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.mapPage input {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  height: auto;
+  width: auto;
+  border: none;
+  background-color: var(--second-background-color);
+  color: var(--accent-color);
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.welcomePage {
+  width: calc(100% - 40px);
+  margin: 20px;
+}
+
+.welcomecontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+  flex: 1;
+}
+
+.box {
+  border: var(--second-accent-color) 1px solid;
+  border-radius: 5px;
+  padding: 15px;
+  flex: 1;
+}
+
+#recent-incidents {
+  cursor: pointer;
+}
+
+.welcomeheader {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 5px;
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.welcomeheader .subtext {
+  text-align: center;
+}
+
+.welcometitle {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.sub-color {
+  color: var(--second-accent-color);
+}
+
+
+.searchPage {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: calc(100% - 40px);
+  margin: 20px;
+}
+
+.searchPedPage,
+.searchCarPage {
+  width: 100%;
+  height: calc(100% - var(--header-height));
+  border: var(--second-accent-color) 1px solid;
+  border-radius: 5px;
+}
+
+.searchCarPage .resultContainer,
+.searchPedPage .resultContainer {
+  width: calc(100% - 60px);
+  margin: 30px;
+  height: calc(100% - 60px - 42px - 20px);
+  overflow-y: auto;
+}
+
+.searchCarPage .resultContainer .name,
+.searchPedPage .resultContainer .name,
+.shiftPage .title {
+  width: auto;
+  height: auto;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.searchPedPage .citationArrestContainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  height: auto;
+  margin: 15px;
+  margin-top: 50px;
+  width: calc(100% - 40px);
+}
+
+.searchPedPage .citationArrestContainer .informationLabel {
+  width: calc(100% - 10px);
+}
+
+.searchPedPage .reportContainer .searchCharge {
+  margin: 2px;
+  width: calc(100% - 10px - 4px - 4px);
+}
+
+.alphabetPage .container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  height: calc(100% - 20px);
+  margin: 20px;
+  width: calc(100% - 40px);
+}
+
+.alphabetPage .container .name {
+  font-size: 32px;
+  font-weight: 800;
+  width: auto;
+  height: auto;
+}
+
+.alphabetPage .container .label {
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.alphabetPage .container .list {
+  font-family: monospace;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.alphabetPage .container .item {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  width: fit-content;
+  height: auto;
+}
+
+.alphabetPage .container .list .letter {
+  color: var(--second-accent-color);
+  margin-right: 10px;
+}
+
+.searchPedPage .reportContainer .result .btn {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: monospace;
+  padding: 5px;
+  border: none;
+  color: var(--main-color);
+  outline: none;
+  cursor: pointer;
+  transition: 50ms linear;
+  background-color: transparent;
+  width: calc(100% - 10px);
+  margin: 5px;
+  text-align: left;
+}
+
+.searchPedPage .reportContainer .result .btn:hover,
+.searchPedPage .reportContainer .result .btn:focus {
+  background-color: var(--warning-color-half);
+}
+
+.searchPedPage .reportContainer .result .btn::before {
+  content: '• ';
+}
+
+.searchPedPage .citationReport .result .charges,
+.searchPedPage .arrestReport .result .charges {
+  overflow: auto;
+  height: 50%;
+}
+
+.courtPage .list .title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 20px;
+}
+
+.courtPage .informationLabelContainer:not(:last-child) {
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--second-accent-color-half);
+}
+
+.courtPage .list {
+  height: calc(100% - 82px);
+  overflow-y: auto;
+}
+
+/* for old court data */
+.courtPage summary {
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+}
+.courtPage summary::marker {
+  color: var(--second-accent-color);
+}
+
+.courtPage details div {
+  margin-left: 21px;
+}
+
+.shiftPage .btnContainer button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.shiftPage .currentShift {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+  width: auto;
+  height: auto;
+  gap: 20px 50px;
+}
+
+.shiftPage .currentShiftNotes {
+  background-color: transparent;
+  color: var(--main-color);
+  border: var(--second-accent-color) 2px solid;
+  outline: none;
+  font-size: 20px;
+  font-weight: 400;
+  resize: none;
+  padding: 10px;
+}
+
+.shiftPage .shiftNotes,
+.courtPage .description {
+  font-family: monospace;
+  background-color: transparent;
+  color: var(--main-color);
+  border: var(--second-accent-color) 2px solid;
+  outline: none;
+  font-size: 20px;
+  font-weight: 400;
+  resize: none;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+}
+
+.shiftPage .courtCaseValue {
+  cursor: pointer;
+}
+
+.shiftPage .courtCaseValue::before {
+  content: '• ';
+  transition: 50ms linear;
+}
+
+.shiftPage .courtCaseValue:hover::before {
+  color: var(--second-accent-color);
+}
+
+.shiftPage .list .informationLabelContainer:not(:first-child) {
+  border-top: 2px solid var(--second-accent-color-half);
+  padding-top: 15px;
+}
+
+.shiftPage .title {
+  margin-left: 15px;
+}
+
+.shiftPage {
+  overflow-y: auto;
+}
+
+.incidentReport {
+  margin: 0;
+  padding: 20px;
+}
+
+.incidentReport .headerButtonContainer {
+  margin-bottom: 10px;
+}
+
+.incidentReport .options .line {
+  margin: 10px 2px;
+  width: calc(100% - 4px);
+  height: 2px;
+  background-color: var(--second-accent-color-half);
+}
+
+.incidentReport .result #incidentNumber {
+  font-family: monospace;
+  height: auto;
+  width: calc(100% - 10px - 4px - 10px);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid var(--second-accent-color);
+  background-color: var(--background-color);
+  color: var(--main-color);
+  outline: none;
+  transition: 50ms linear;
+}
+
+.incidentReport .result #incidentDescription {
+  position: relative;
+  font-family: monospace;
+  min-height: calc(100% - 172px);
+  width: calc(100% - 10px - 4px - 10px);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid var(--second-accent-color);
+  background-color: var(--background-color);
+  color: var(--main-color);
+  outline: none;
+  transition: 50ms linear;
+  white-space: pre-wrap;
+}
+
+.incidentReport .result .incidentDescriptionPlaceholder {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.5;
+  margin: 0 12px;
+  position: absolute;
+  z-index: 2;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.incidentReport .result #incidentDescription span.link {
+  border-bottom: 1px solid var(--second-accent-color-half);
+  color: var(--second-accent-color);
+  cursor: pointer;
+  transition: 50ms linear;
+}
+
+.incidentReport .result #incidentDescription span.link:hover {
+  border-color: var(--second-accent-color);
+}
+
+.shiftPage
+  .incidentReport
+  .result.disabled
+  > :not(.headerButtonContainer):not(.incidentDescriptionPlaceholder) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.incidentReport .result.disabled {
+  cursor: not-allowed;
+}
+
+.overlay .incidentReportLinkSuggestions {
+  position: absolute;
+  background-color: var(--background-color);
+  border: 2px solid var(--second-accent-color);
+  padding: 5px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.overlay .incidentReportLinkSuggestions > div {
+  pointer-events: all;
+  cursor: pointer;
+  transition: 50ms linear;
+}
+
+.overlay .incidentReportLinkSuggestions > div.focused {
+  color: var(--second-accent-color);
+}
+
+.overlay .incidentReportLinkSuggestions > div:hover {
+  color: var(--second-accent-color);
+}
+
+/* remove border radius on iOS */
+input {
+  border-radius: 0;
+}
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.currentID {
+  pointer-events: all;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  height: 200px;
+  width: 350px;
+  background-color: var(--second-background-color);
+  padding: 5px 15px 15px 15px;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+.currentID .title {
+  display: grid;
+  grid-auto-flow: column;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.currentID .title .sa {
+  color: var(--accent-color);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.currentID .title .dl {
+  color: var(--accent-color);
+  font-size: 20px;
+  font-weight: 600;
+  align-self: center;
+}
+
+.currentID .container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 30px;
+  align-self: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+img {
+  width: 120px;
+}
+
+.currentID .properties {
+  color: var(--second-accent-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.currentID .properties * {
+  margin-bottom: 5px;
+}
+
+.currentID .properties :before {
+  content: attr(data-before);
+  color: var(--accent-color);
+  margin-right: 5px;
+}
+
+.currentID .closeCurrentID,
+.currentID .nextCurrentID {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: monospace;
+  padding: 5px;
+  border: 2px solid var(--warning-color);
+  border-radius: 0;
+  color: var(--main-color);
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  text-align: left;
+}
+
+.currentID .nextCurrentID {
+  border-color: var(--second-accent-color);
+}
+
+.currentID .closeCurrentID:hover {
+  background-color: var(--warning-color-half);
+}
+
+.currentID .nextCurrentID:hover {
+  background-color: var(--second-accent-color-half);
+}
+
+.currentID .backgroundWrapper {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr max-content max-content;
+  gap: 5px;
+  top: 0;
+  border-radius: 5px 5px 0 0;
+  background-color: var(--background-color);
+  width: calc(100% - 30px - 10px);
+  height: 35px;
+  padding: 5px;
+  transform: translateZ(-1px);
+  transition: 200ms ease-out;
+}
+
+.currentID:hover .backgroundWrapper {
+  top: -45px;
+}
+
+.currentID .currentIDPedType {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  width: fit-content;
+  align-self: center;
+}
+
+.showCurrentID-container {
+  position: fixed;
+  background-color: var(--background-color);
+  z-index: 2;
+  bottom: 10px;
+  right: 10px;
+}
+
+.showCurrentID {
+  pointer-events: all;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: monospace;
+  padding: 5px;
+  border: 2px solid var(--second-accent-color);
+  color: var(--main-color);
+  outline: none;
+  cursor: pointer;
+  transition: 50ms linear;
+  background-color: transparent;
+  text-align: left;
+}
+
+.showCurrentID:hover {
+  background-color: var(--second-accent-color-half);
+}
+
+.currentID .hideCurrentID {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: monospace;
+  padding: 5px;
+  border: 2px solid var(--warning-color);
+  color: var(--background-color);
+  outline: none;
+  cursor: pointer;
+  transition: 50ms linear;
+  background-color: transparent;
+  opacity: 0;
+}
+
+.currentID:hover .hideCurrentID {
+  opacity: 1;
+}
+
+.currentID .hideCurrentID:hover {
+  background-color: var(--warning-color-half);
+}
+
+.overlay .customizationLink {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: var(--second-accent-color);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: monospace;
+  padding: 2px;
+  pointer-events: all;
+  background-color: var(--background-color);
+}
+
+.calloutPage .informationLabelContainer {
+  margin: 20px;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.calloutPage .calloutDetails {
+  background-color: var(--background-color);
+  color: var(--main-color);
+  border: 2px solid var(--second-accent-color);
+  font-family: monospace;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 20px;
+  margin-top: 5px;
+  width: calc(100% - 40px - 20px - 4px);
+  height: calc(100% - 25px - 20px - 63px - 40px);
+  resize: none;
+}
+
+.calloutPage .calloutDetails .systemMessage {
+  opacity: 0.5;
+}
+
+.calloutPage .title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 20px;
+}
+
+.warnCustomFilesPopUp {
+  position: fixed;
+  background-color: var(--background-color);
+  width: 300px;
+  bottom: 10px;
+  right: 10px;
+  border: 2px solid var(--warning-color-half);
+  padding: 5px;
+  pointer-events: all;
+}
+
+.warnCustomFilesPopUp button {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: monospace;
+  padding: 5px;
+  border: 2px solid var(--second-accent-color);
+  color: var(--main-color);
+  outline: none;
+  cursor: pointer;
+  transition: 50ms linear;
+  background-color: transparent;
+  width: 100%;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.warnCustomFilesPopUp button:hover {
+  background-color: var(--second-accent-color-half);
+}
+
+.warnCustomFilesPopUp .text {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  margin: 0 2px;
+}
+
+.warnCustomFilesPopUp a {
+  color: var(--second-accent-color);
+}
+
+/* overwrite */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.tenCodesPage .container {
+  display: grid;
+  grid-auto-flow: column;
+  height: calc(100% - 40px);
+  margin: 20px;
+  width: calc(100% - 40px);
+  overflow: auto;
+  zoom: 0.8;
+}
+
+.tenCodesPage .name {
+  font-size: 28px;
+  font-weight: 800;
+  width: auto;
+  height: auto;
+}
+
+.tenCodesPage .label {
+  height: auto;
+}
+
+.tenCodesPage .list {
+  font-family: monospace;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: auto;
+}
+
+.tenCodesPage .item {
+  font-size: 20px;
+  font-weight: 600;
+  height: auto;
+  width: calc(100% - 10px);
+  min-width: max-content;
+  padding: 5px 0 5px 10px;
+}
+
+.tenCodesPage .item:not(:first-child) {
+  border-top: 2px solid var(--second-accent-color-half); /* Customize color variable */
+}
