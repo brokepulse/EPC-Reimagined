@@ -1407,19 +1407,47 @@ async function openIncidentReports(disableAddIncidentButton = false, shift) {
 
 async function checkAndOpenIncidents() {
   const openRecentIncidents = localStorage.getItem("openRecentIncidents");
+  const openCreateIncident = localStorage.getItem("openCreateIncident");
 
+  // Handle recent incidents opening
   if (openRecentIncidents === "true") {
-      // Clear the flag so it doesn’t trigger again unexpectedly
-      localStorage.removeItem("openRecentIncidents");
+    // Clear the flag so it doesn’t trigger again unexpectedly
+    localStorage.removeItem("openRecentIncidents");
 
-      // Load or define the incidents data
-      const shiftsData = await loadData('/data/shift');  // Adjust the path if needed
-      const incidents = shiftsData.shifts.flatMap(shift => shift.incidents);
+    // Load the data
+    const shiftsData = await loadData('/data/shift');  // Adjust the path if needed
+    const incidents = shiftsData.shifts.flatMap(shift => shift.incidents);
 
-      // Call openIncidentReports with the full incidents data
-      openIncidentReports(true, { incidents });
+    // Call openIncidentReports with all incidents data
+    openIncidentReports(true, { incidents });
+  }
+
+  // Handle create new incident page opening
+  if (openCreateIncident === "true") {
+    // Clear the flag so it doesn’t trigger again unexpectedly
+    localStorage.removeItem("openCreateIncident");
+
+    // Simulate the "New Incident" button click
+    document.querySelector('.shiftPage .incidentReport').classList.remove('hidden');
+    createNewIncidentReport(); // This triggers the creation of a new incident report directly
   }
 }
+
+function closeIncidentReport() {
+  document.querySelector('.shiftPage .incidentReport').classList.add('hidden'); // Hide the incident report
+
+  // Check if the user came from the welcome page
+  if (localStorage.getItem('cameFromWelcomePage') === 'true') {
+    localStorage.removeItem('cameFromWelcomePage'); // Remove the flag
+    goToPage('welcome'); // Redirect to the welcome page (replace 'welcome' with your page identifier)
+  }
+}
+
+// You can attach this function to the close button if needed
+document.querySelector('.incidentReport .closeButton').addEventListener('click', closeIncidentReport);
+
+
+
 
 
 const incidentReportLinkPrefixes = ['$', '@', '#']
@@ -2029,6 +2057,12 @@ async function submitIncident() {
       break
     }
   }
+
+  if (localStorage.getItem('cameFromWelcomePage') === 'true') {
+    localStorage.removeItem('cameFromWelcomePage'); // Remove the flag
+    goToPage('welcome'); // Redirect to the welcome page (replace 'welcome' with your page identifier)
+  }
+
   document.querySelector('.shiftPage .incidentReport').classList.add('hidden')
   renderShiftPage()
 }
@@ -2056,16 +2090,34 @@ async function createNewIncidentReport(
   id = Math.floor(Math.random() * 90000) + 10000,
   description = ''
 ) {
-  const number = `${new Date().getFullYear().toString().slice(2)}-${id}`
-  const shift = await (await fetch('/data/shift')).json()
-  const currentShift = shift.currentShift
-  currentShift.incidents.push({ number: number, description: description })
+  const number = `${new Date().getFullYear().toString().slice(2)}-${id}`;
+  const shift = await (await fetch('/data/shift')).json();
+  const currentShift = shift.currentShift;
+
+  // Add the new incident to the current shift
+  const newIncident = { number: number, description: description };
+  currentShift.incidents.push(newIncident);
+
+  // Update the current shift with the new incident
   await fetch('/post/updateCurrentShift', {
     method: 'post',
     body: JSON.stringify(currentShift),
-  })
-  updateIncidentReportOptions(false, currentShift)
+  });
+
+  // Update the incident report options to reflect the new incident
+  await updateIncidentReportOptions(false, currentShift);
+
+  // Find and simulate a click on the new incident button
+  const newIncidentButton = document.querySelector(`.shiftPage .incidentReport .options button:last-child`);
+  if (newIncidentButton) {
+    newIncidentButton.click(); // Simulate the click
+  }
+
+  // Ensure the incident report section is visible
+  document.querySelector('.shiftPage .incidentReport').classList.remove('hidden');
 }
+
+
 
 async function goToCourtCaseFromValue(caseNumber) {
   await goToPage('court')

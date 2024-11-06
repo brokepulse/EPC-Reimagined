@@ -1,25 +1,41 @@
 const settings = {
-  audioSource: '/plugins/AudioAlerts.1.4.2/alert_0.mp3',
-  // available audios: /plugins/AudioAlerts.1.4.2/alert_0.mp3 & /plugins/AudioAlerts.1.4.2/alert_0.mp3 (default)
+  audioSource: '/plugins/AudioAlerts/alert_0.mp3',
+  notificationSource: '/plugins/AudioAlerts/notification.mp3',
   repeat: 3,
   volume: 0.5,
   delay: 250,
   voice: 0,
-}
+};
 
-const audio = new Audio(settings.audioSource)
+const audio = new Audio(settings.audioSource);
+const notificationAudio = new Audio(settings.notificationSource);
 
 function playAlertSound() {
-  let i = 0
-  audio.play()
-  audio.volume = settings.volume
+  let i = 0;
+  audio.volume = settings.volume;
+  audio.play();
   audio.addEventListener('ended', function () {
     if (i < settings.repeat - 1) {
-      audio.play()
+      audio.play();
     }
-    i++
-  })
+    i++;
+  });
 }
+
+function playNotificationSound() {
+  const audio = new Audio('/plugins/AudioAlerts/notification.mp3');
+  audio.volume = 0.5; // Adjust the volume as needed
+  audio.play().catch(error => {
+    console.error("Error playing notification sound:", error);
+  });
+}
+
+// Indicate that the plugin is active
+const isAudioAlertsEnabled = true; // Ensure this is accessible globally or exported if using modules
+
+
+// Attach the function to the window object to make it globally accessible
+window.playNotificationSound = playNotificationSound;
 
 reassignEventListener('.searchPedPage .pedBtn', 'click', function () {
   renderPedSearchWithAlert()
@@ -91,55 +107,3 @@ async function renderCarSearchWithAlert() {
   }
 }
 
-let voiceAvailable = false
-const oldUpdateCalloutPage = updateCalloutPage
-updateCalloutPage = async function () {
-  const oldCalloutData = document.querySelector('.content .calloutPage').dataset
-    .calloutData
-  await oldUpdateCalloutPage.apply(this)
-  if (
-    oldCalloutData !=
-      document.querySelector('.content .calloutPage').dataset.calloutData &&
-    JSON.parse(
-      document.querySelector('.content .calloutPage').dataset.calloutData
-    ).acceptanceState == 'Pending'
-  ) {
-    await sleep(settings.delay)
-    const calloutData = JSON.parse(
-      document.querySelector('.content .calloutPage').dataset.calloutData
-    )
-    for (const calloutDataItem of Object.keys(calloutData)) {
-      calloutData[calloutDataItem] = calloutData[calloutDataItem].replace(
-        /~(.*?)~/g,
-        ''
-      )
-    }
-    const language = await getLanguage()
-    const text = `${calloutData.message} ${calloutData.advisory} ${
-      calloutData.postal
-    } ${calloutData.street} Respond ${
-      calloutData.priority == 'default'
-        ? language.content.calloutPage.defaultPriority
-        : calloutData.priority
-    }`
-    if (!voiceAvailable) {
-      window.speechSynthesis.addEventListener('voiceschanged', function () {
-        speakText(text)
-      })
-    } else {
-      speakText(text)
-    }
-  }
-}
-
-window.speechSynthesis.addEventListener('voiceschanged', function () {
-  voiceAvailable = true
-})
-
-function speakText(text) {
-  const synth = window.speechSynthesis
-  const voices = synth.getVoices()
-  const utterance = new SpeechSynthesisUtterance(text)
-  utterance.voice = voices[settings.voice]
-  synth.speak(utterance)
-}

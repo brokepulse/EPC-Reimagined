@@ -1,8 +1,8 @@
-[2024-11-06T07:52:19.851Z] EPC server log initialized
-[2024-11-06T07:52:19.851Z] Version: 1.4.3
-[2024-11-06T07:52:19.851Z] Timezone offset: 300
-[2024-11-06T07:52:19.852Z] Log path: E:\Rockstar\Red Dead\Grand Theft Auto V\EPC\EPC.log
-[2024-11-06T07:52:19.852Z] Config:
+[2024-11-06T22:05:36.310Z] EPC server log initialized
+[2024-11-06T22:05:36.311Z] Version: 1.4.3
+[2024-11-06T22:05:36.311Z] Timezone offset: 300
+[2024-11-06T22:05:36.312Z] Log path: E:\Rockstar\Red Dead\Grand Theft Auto V\EPC\EPC.log
+[2024-11-06T22:05:36.312Z] Config:
   useStopThePed: true
   useLSPDFROwner: false
   showCurrentID: true
@@ -15,12 +15,12 @@
   additionalCitationChance: 0.4
   probationChance: 0.25
   paroleChance: 0.3
-  showCustomizationLink: false
+  showCustomizationLink: true
   replaceStaticWithCustomLanguage: false
   port: 80
   defaultMapZoom: 1.5
   showCalloutPage: true
-  autoShowCalloutPage: false
+  autoShowCalloutPage: true
   updateCalloutPageInterval: 2000
   clearCalloutPageTime: null
   automaticIncidentReports: true
@@ -31,32 +31,26 @@
   newWindowOffset: center
   newWindowOffsetMarginX: 20
   newWindowOffsetMarginY: 20
-[2024-11-06T07:52:19.853Z] Plugins:
-  AudioAlerts.1.4.2: 
+[2024-11-06T22:05:36.312Z] Plugins:
+  AudioAlerts: 
 		Files: 
 			alert_0.mp3: 31809
-			alert_1.mp3: 33436
-			audioAlerts.js: 4714
-		Size: 69959
-		Enabled on load: false
-  TenCodes.1.4.2: 
-		Files: 
-			tenCodes.css: 724
-			tenCodes.js: 1441
-		Size: 2165
-		Enabled on load: false
-[2024-11-06T07:52:19.853Z] Data files:
+			audioAlerts.js: 3592
+			notification.mp3: 21985
+		Size: 57386
+		Enabled on load: true
+[2024-11-06T22:05:36.313Z] Data files:
   callout.data: Default 0 Data 0
   cars.json: Default 2 Data 2
   carsCautions.data: Default 0 Data 0
-  court.json: Default 2 Data 2260
+  court.json: Default 2 Data 290
   currentID.data: Default 0 Data 0
-  peds.json: Default 2 Data 1104
+  peds.json: Default 2 Data 269
   pedsCautions.data: Default 0 Data 0
-  shift.json: Default 33 Data 1654
-  worldCars.data: Default 0 Data 754
-  worldPeds.data: Default 0 Data 224
-[2024-11-06T07:52:19.853Z] EPC Directory:
+  shift.json: Default 33 Data 398
+  worldCars.data: Default 0 Data 2282
+  worldPeds.data: Default 0 Data 1737
+[2024-11-06T22:05:36.313Z] EPC Directory:
   [File] #start.bat
   [File] arrestOptions.json
   [File] citationOptions.json
@@ -72,36 +66,22 @@
   [File] licenseOptions.json
   [Directory] main
   [Directory] plugins
-[2024-11-06T07:52:19.862Z] Server listening on port 80
-[2024-11-06T07:52:21.176Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-[2024-11-06T07:53:45.315Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-[2024-11-06T07:54:12.263Z] Post request at: /post/updateCurrentShift
-[2024-11-06T07:54:12.264Z] Payload: {"start":1730879652262,"notes":"","courtCases":[],"incidents":[]}
-[2024-11-06T07:54:12.265Z] Responded with status code: 200
-[2024-11-06T07:54:14.692Z] Post request at: /post/updateCurrentShift
-[2024-11-06T07:54:14.693Z] Payload: {"start":1730879652262,"notes":"","courtCases":[],"incidents":[{"number":"24-74165","description":""}]}
-[2024-11-06T07:54:14.693Z] Responded with status code: 200
-[2024-11-06T07:54:22.513Z] Post request at: /post/updateCurrentShift
-[2024-11-06T07:54:22.513Z] Payload: {"start":1730879652262,"notes":"","courtCases":[],"incidents":[{"number":"24-74165","description":"Test"}]}
-[2024-11-06T07:54:22.513Z] Responded with status code: 200
-[2024-11-06T07:54:25.537Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-[2024-11-06T07:54:29.935Z] Post request at: /post/updateCurrentShift
-[2024-11-06T07:54:29.935Z] Payload: null
-[2024-11-06T07:54:29.935Z] Responded with status code: 200
-[2024-11-06T07:54:29.936Z] Post request at: /post/addShift
-[2024-11-06T07:54:29.936Z] Payload: {"start":1730879652262,"notes":"","courtCases":[],"incidents":[{"number":"24-74165","description":"Test"}],"end":1730879669932}
-[2024-11-06T07:54:29.937Z] Responded with status code: 200
-[2024-11-06T07:54:32.133Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-[2024-11-06T07:55:06.236Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-[2024-11-06T07:55:21.558Z] Post request at: /post/updateCourtDescription
-[2024-11-06T07:55:21.559Z] Payload: {"number":"SA57194019","description":"<br>"}
-[2024-11-06T07:55:21.559Z] Responded with status code: 200
-[2024-11-06T07:55:24.737Z] Post request at: /post/updateCourtDescription
-[2024-11-06T07:55:24.738Z] Payload: {"number":"SA57194019","description":"<br><div><br></div>"}
-[2024-11-06T07:55:24.738Z] Responded with status code: 200
-[2024-11-06T07:55:25.615Z] Post request at: /post/updateCourtDescription
-[2024-11-06T07:55:25.616Z] Payload: {"number":"SA57194019","description":"<div><br></div>"}
-[2024-11-06T07:55:25.616Z] Responded with status code: 200
-[2024-11-06T07:55:25.765Z] Post request at: /post/updateCourtDescription
-[2024-11-06T07:55:25.765Z] Payload: {"number":"SA57194019","description":""}
-[2024-11-06T07:55:25.766Z] Responded with status code: 200
+[2024-11-06T22:05:36.322Z] Server listening on port 80
+[2024-11-06T22:05:37.708Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+[2024-11-06T22:05:37.710Z] [Client Log] [Error] TypeError: Cannot read properties of null (reading 'addEventListener') (at http://localhost/main/script.js:1447:55)
+[2024-11-06T22:05:40.810Z] Post request at: /post/updateCurrentShift
+[2024-11-06T22:05:40.810Z] Payload: {"start":1730929872169,"notes":"","courtCases":[],"incidents":[{"number":"24-81872","description":"asdasd"},{"number":"24-61611","description":"asdasd"},{"number":"24-37026","description":""},{"number":"24-18392","description":""},{"number":"24-69857","description":"s"},{"number":"24-53878","description":""}]}
+[2024-11-06T22:05:40.811Z] Responded with status code: 200
+[2024-11-06T22:05:42.013Z] Post request at: /post/updateCurrentShift
+[2024-11-06T22:05:42.013Z] Payload: {"start":1730929872169,"notes":"","courtCases":[],"incidents":[{"number":"24-81872","description":"asdasd"},{"number":"24-61611","description":"asdasd"},{"number":"24-37026","description":""},{"number":"24-18392","description":""},{"number":"24-69857","description":"s"},{"number":"24-53878","description":""}]}
+[2024-11-06T22:05:42.013Z] Responded with status code: 200
+[2024-11-06T22:05:57.816Z] Post request at: /post/updateCurrentShift
+[2024-11-06T22:05:57.817Z] Payload: null
+[2024-11-06T22:05:57.817Z] Responded with status code: 200
+[2024-11-06T22:05:57.818Z] Post request at: /post/addShift
+[2024-11-06T22:05:57.818Z] Payload: {"start":1730929872169,"notes":"","courtCases":[],"incidents":[{"number":"24-81872","description":"asdasd"},{"number":"24-61611","description":"asdasd"},{"number":"24-37026","description":""},{"number":"24-18392","description":""},{"number":"24-69857","description":"s"},{"number":"24-53878","description":""}],"end":1730930757813}
+[2024-11-06T22:05:57.819Z] Responded with status code: 200
+[2024-11-06T22:06:16.798Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+[2024-11-06T22:06:16.800Z] [Client Log] [Error] TypeError: Cannot read properties of null (reading 'addEventListener') (at http://localhost/main/script.js:1447:55)
+[2024-11-06T22:07:22.279Z] [Client Log] [New Connection] localhost Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+[2024-11-06T22:07:22.280Z] [Client Log] [Error] TypeError: Cannot read properties of null (reading 'addEventListener') (at http://localhost/main/script.js:1447:55)

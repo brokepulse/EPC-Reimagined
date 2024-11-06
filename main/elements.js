@@ -302,79 +302,146 @@ function calculateTotalHours(shiftsData) {
 async function displayData() {
   console.log("Running displayData"); // Debugging log
   try {
-      const shiftsData = await loadData('/data/shift');
-      const courtCasesData = await loadData('/data/court');
+    const shiftsData = await loadData('/data/shift');
+    const courtCasesData = await loadData('/data/court');
 
-      if (shiftsData && courtCasesData) {
-          console.log("Data loaded:", shiftsData, courtCasesData); // Debugging log
+    if (shiftsData && courtCasesData) {
+      console.log("Data loaded:", shiftsData, courtCasesData); // Debugging log
 
-          // Display Officer Name and Badge
-          const currentUser = localStorage.getItem("currentUser");
-          const users = readData();
-          const officerName = users[currentUser].characterName;
-          const badgeNumber = users[currentUser].badgeNumber;
-          
-          const officerNameEl = document.getElementById('officer-name');
-          if (officerNameEl) officerNameEl.textContent = `${officerName} (#${badgeNumber})`;
+      // Display Officer Name and Badge
+      const currentUser = localStorage.getItem("currentUser");
+      const users = readData();
+      const officerName = users[currentUser].characterName;
+      const badgeNumber = users[currentUser].badgeNumber;
+      
+      const officerNameEl = document.getElementById('officer-name');
+      if (officerNameEl) officerNameEl.textContent = `${officerName} (#${badgeNumber})`;
 
-          // Display Shift Summary
-          const numShifts = shiftsData.shifts.length;
-          const totalHoursWorked = calculateTotalHours(shiftsData);
-          const shiftCountEl = document.getElementById('shift-count');
-          if (shiftCountEl) shiftCountEl.textContent = numShifts;
+      // Update duty status
+      const dutyStatusEl = document.getElementById('duty-status');
+      const currentShift = shiftsData.currentShift;
+      const createIncidentDiv = document.getElementById('createincident');
 
-          const totalHoursEl = document.getElementById('total-hours');
-          if (totalHoursEl) totalHoursEl.textContent = `${totalHoursWorked}hrs`;
+      if (currentShift) {
+        dutyStatusEl.textContent = "On Duty";
+        dutyStatusEl.style.color = "var(--warning-color-green)"; // Optional: color change for visual effect
 
-          // Display Court Cases Count
-          const numCourtCases = courtCasesData.length;
-          const courtCaseCountEl = document.getElementById('court-case-count');
-          if (courtCaseCountEl) courtCaseCountEl.textContent = numCourtCases;
+        // Enable createincident div and reset style
+        if (createIncidentDiv) {
+          createIncidentDiv.style.pointerEvents = "auto";
+          createIncidentDiv.style.opacity = "1"; // Full opacity
+          createIncidentDiv.style.cursor = "pointer";
+        }
+      } else {
+        dutyStatusEl.textContent = "Off Duty";
+        dutyStatusEl.style.color = "var(--warning-color)"; // Optional: color change for visual effect
 
-          // Count and display total incidents
-          const totalIncidents = shiftsData.shifts.reduce((acc, shift) => acc + shift.incidents.length, 0);
-          const incidentCountEl = document.getElementById('incident-count');
-          if (incidentCountEl) incidentCountEl.textContent = `${totalIncidents}`;
-          
-          // Last Shift Summary
-          const lastShift = shiftsData.shifts[numShifts - 1];
-          if (lastShift) {
-              const lastShiftStartEl = document.getElementById('last-shift-start');
-              if (lastShiftStartEl) lastShiftStartEl.textContent = new Date(lastShift.start).toLocaleString();
-
-              const lastShiftEndEl = document.getElementById('last-shift-end');
-              if (lastShiftEndEl) lastShiftEndEl.textContent = new Date(lastShift.end).toLocaleString();
-
-              const lastShiftIncidentsEl = document.getElementById('last-shift-incidents');
-              if (lastShiftIncidentsEl) lastShiftIncidentsEl.textContent = lastShift.incidents.length;
-
-              const lastShiftCourtCasesEl = document.getElementById('last-shift-court-cases');
-              if (lastShiftCourtCasesEl) lastShiftCourtCasesEl.textContent = lastShift.courtCases.length;
-          }
-
-          // Collect all incidents across all shifts, limit to most recent 4
-          const allIncidents = shiftsData.shifts.flatMap(shift => shift.incidents).slice(0, 4);
-
-          // Display recent incidents as a clickable label
-          const recentIncidentsLabel = allIncidents
-              .map(incident => `• ${incident.number}`)
-              .join('<br>');
-          const recentIncidentsContainer = document.getElementById('recent-incidents');
-          recentIncidentsContainer.innerHTML = recentIncidentsLabel || "No recent incidents";
-
-          // Add click event listener to simulate shift tab click
-          recentIncidentsContainer.addEventListener('click', function() {
-              console.log("Redirecting to shiftPage by clicking the Shift tab"); // Debugging log
-
-              // Set flag to open recent incidents overlay after navigation
-              localStorage.setItem("openRecentIncidents", "true");
-
-              // Simulate click on the Shift tab in the header
-              document.getElementById('shift-tab').click();
-          });
+        // Gray out the createincident div and disable interaction
+        if (createIncidentDiv) {
+          createIncidentDiv.style.pointerEvents = "none";
+          createIncidentDiv.style.opacity = "0.5"; // Reduced opacity to gray out
+          createIncidentDiv.style.cursor = "not-allowed";
+        }
       }
+
+      // Display Shift Summary
+      const numShifts = shiftsData.shifts.length;
+      const totalHoursWorked = calculateTotalHours(shiftsData);
+      const shiftCountEl = document.getElementById('shift-count');
+      if (shiftCountEl) shiftCountEl.textContent = numShifts;
+
+      const totalHoursEl = document.getElementById('total-hours');
+      if (totalHoursEl) totalHoursEl.textContent = `${totalHoursWorked}hrs`;
+
+      // Display Court Cases Count
+      const numCourtCases = courtCasesData.length;
+      const courtCaseCountEl = document.getElementById('court-case-count');
+      if (courtCaseCountEl) courtCaseCountEl.textContent = numCourtCases;
+
+      // Count and display total incidents
+      const totalIncidents = shiftsData.shifts.reduce((acc, shift) => acc + shift.incidents.length, 0);
+      const incidentCountEl = document.getElementById('incident-count');
+      if (incidentCountEl) incidentCountEl.textContent = `${totalIncidents}`;
+      
+      // Get the summary heading element and the border container
+      const shiftSummaryHeadingEl = document.querySelector('.horizontal .subtitle');
+      const shiftSummaryBoxEl = document.querySelector('.horizontal .subtext.main-color.box');
+
+      // Check for current shift
+      if (currentShift) {
+        shiftSummaryHeadingEl.textContent = "Current Shift Summary";
+        shiftSummaryBoxEl.style.borderColor = "var(--warning-color-green)";
+        
+        // Display current shift details
+        const lastShiftStartEl = document.getElementById('last-shift-start');
+        if (lastShiftStartEl) lastShiftStartEl.textContent = new Date(currentShift.start).toLocaleString();
+
+        const lastShiftEndEl = document.getElementById('last-shift-end');
+        if (lastShiftEndEl) lastShiftEndEl.textContent = "Ongoing";
+
+        const lastShiftIncidentsEl = document.getElementById('last-shift-incidents');
+        if (lastShiftIncidentsEl) lastShiftIncidentsEl.textContent = currentShift.incidents.length;
+
+        const lastShiftCourtCasesEl = document.getElementById('last-shift-court-cases');
+        if (lastShiftCourtCasesEl) lastShiftCourtCasesEl.textContent = currentShift.courtCases.length;
+      } else {
+        shiftSummaryHeadingEl.textContent = "Last Shift Summary";
+        shiftSummaryBoxEl.style.borderColor = "";
+
+        const lastShift = shiftsData.shifts[numShifts - 1];
+        if (lastShift) {
+          const lastShiftStartEl = document.getElementById('last-shift-start');
+          if (lastShiftStartEl) lastShiftStartEl.textContent = new Date(lastShift.start).toLocaleString();
+
+          const lastShiftEndEl = document.getElementById('last-shift-end');
+          if (lastShiftEndEl) lastShiftEndEl.textContent = new Date(lastShift.end).toLocaleString();
+
+          const lastShiftIncidentsEl = document.getElementById('last-shift-incidents');
+          if (lastShiftIncidentsEl) lastShiftIncidentsEl.textContent = lastShift.incidents.length;
+
+          const lastShiftCourtCasesEl = document.getElementById('last-shift-court-cases');
+          if (lastShiftCourtCasesEl) lastShiftCourtCasesEl.textContent = lastShift.courtCases.length;
+        }
+      }
+
+      const createincidentcontainer = document.getElementById('createincident');
+
+      createincidentcontainer.addEventListener('click', function() {
+        console.log("Redirecting to shiftPage by clicking the Shift tab"); // Debugging log
+
+        // Set flag to open recent incidents overlay after navigation
+        localStorage.setItem("openCreateIncident", "true");
+        localStorage.setItem("cameFromWelcomePage", "true");
+
+        // Simulate click on the Shift tab in the header
+        document.getElementById('shift-tab').click();
+    });
+
+      // Collect all incidents across all shifts, limit to most recent 4
+      const allIncidents = shiftsData.shifts.flatMap(shift => shift.incidents);
+      const recentIncidents = allIncidents.slice(-4).reverse(); // Get the last 4 incidents and reverse the order for display
+
+      // Display recent incidents as a clickable label
+      const recentIncidentsLabel = recentIncidents
+          .map(incident => `• ${incident.number}`)
+          .join('<br>');
+      const recentIncidentsContainer = document.getElementById('recent-incidents');
+      recentIncidentsContainer.innerHTML = recentIncidentsLabel || "No recent incidents";
+
+      // Add click event listener to simulate shift tab click
+      recentIncidentsContainer.addEventListener('click', function() {
+          console.log("Redirecting to shiftPage by clicking the Shift tab"); // Debugging log
+
+          // Set flag to open recent incidents overlay after navigation
+          localStorage.setItem("openRecentIncidents", "true");
+          localStorage.setItem("cameFromWelcomePage", "true");
+
+          // Simulate click on the Shift tab in the header
+          document.getElementById('shift-tab').click();
+      });
+    }
   } catch (error) {
-      console.error("Error loading data:", error);
+    console.error("Error loading data:", error);
   }
 }
 
@@ -382,5 +449,137 @@ async function displayData() {
 
 
 
-// Run session check on page load
-window.onload = checkSession;
+async function checkForNewAlerts() {
+  try {
+    // Load the shift data
+    const shiftsData = await loadData('/data/shift');
+
+    // Get current shift data
+    const currentShift = shiftsData.currentShift;
+    if (!currentShift) return; // Exit if there's no active shift
+
+    // Retrieve stored incidents and court cases from localStorage
+    const prevIncidents = JSON.parse(localStorage.getItem('prevIncidents')) || [];
+    const prevCourtCases = JSON.parse(localStorage.getItem('prevCourtCases')) || [];
+
+    // Get current incidents and court cases
+    const currentIncidents = currentShift.incidents.map(incident => incident.number);
+    const currentCourtCases = currentShift.courtCases;
+
+    // Find new incidents and court cases
+    const newIncidents = currentIncidents.filter(incident => !prevIncidents.includes(incident));
+    const newCourtCases = currentCourtCases.filter(courtCase => !prevCourtCases.includes(courtCase));
+
+    let alertMessage = '';
+
+    // If there are new incidents or court cases, create an alert message
+    if (newIncidents.length > 0) {
+      alertMessage = 'New incident(s) available.';
+      localStorage.setItem('prevIncidents', JSON.stringify(currentIncidents));
+    }
+
+    if (newCourtCases.length > 0) {
+      alertMessage = 'New court case(s) available.';
+      localStorage.setItem('prevCourtCases', JSON.stringify(currentCourtCases));
+    }
+
+    // Display the alert if a new incident or court case is found
+    if (alertMessage) {
+      updateAlertBox(alertMessage);
+      showAlertNotification();
+    }
+  } catch (error) {
+    console.error("Error checking for new alerts:", error);
+  }
+}
+
+// Function to show the alert notification
+function showAlertNotification() {
+  const alertNotification = document.getElementById('alert-notification');
+  alertNotification.classList.remove('hidden');
+
+  // Check if the `isAudioAlertsEnabled` variable or function exists
+  if (typeof isAudioAlertsEnabled !== 'undefined' && isAudioAlertsEnabled) {
+    playNotificationSound(); // Play sound only if the audio plugin is active
+  }
+
+  // Hide the alert after 15 seconds
+  setTimeout(() => {
+    alertNotification.classList.add('hidden');
+  }, 15000);
+}
+
+// Check for new alerts every 5 seconds
+setInterval(checkForNewAlerts, 5000);
+
+
+function displayStoredAlerts() {
+  // Retrieve the last alert message from localStorage
+  const storedAlert = localStorage.getItem('lastAlertMessage');
+  
+  // Find the alert box element
+  const alertBox = document.getElementById('alert-box');
+  
+  // Display the stored alert message if it exists, otherwise display "Alerts: None"
+  if (storedAlert) {
+    alertBox.textContent = storedAlert;
+  } else {
+    alertBox.textContent = 'None';
+  }
+}
+
+function updateAlertBox(message) {
+  // Find the alert box element
+  const alertBox = document.getElementById('alert-box');
+  
+  // Update the alert box content
+  alertBox.textContent = message;
+
+  // Store the alert message in localStorage
+  localStorage.setItem('lastAlertMessage', message);
+}
+
+// Function to check if the shift has ended
+async function checkIfShiftEnded() {
+  try {
+    // Load the shift data
+    const shiftsData = await loadData('/data/shift');
+
+    // Check if the current shift has ended
+    const currentShift = shiftsData.currentShift;
+    if (!currentShift || currentShift.status === 'ended') {
+      clearAlerts(); // Clear alerts if the shift has ended
+    }
+  } catch (error) {
+    console.error("Error checking if shift ended:", error);
+  }
+}
+
+// Call `checkIfShiftEnded` every 5 seconds to check for shift end
+setInterval(checkIfShiftEnded, 5000);
+
+function clearAlerts() {
+  // Remove the alert message from localStorage
+  localStorage.removeItem('lastAlertMessage');
+  localStorage.removeItem('prevIncidents');
+  localStorage.removeItem('prevCourtCases');
+
+  // Update the alert box to show "None"
+  const alertBox = document.getElementById('alert-box');
+  alertBox.textContent = 'None';
+}
+
+
+
+
+
+
+
+
+
+
+
+window.onload = () => {
+  checkSession(); // Ensure existing functionality runs
+  displayStoredAlerts(); // Display alerts from localStorage
+};

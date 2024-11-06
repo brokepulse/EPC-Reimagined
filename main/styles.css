@@ -7,6 +7,8 @@
   --second-accent-color-half: rgba(124, 171, 207, 0.5);
   --warning-color: rgb(255, 74, 74);
   --warning-color-half: rgba(255, 72, 72, 0.5);
+  --warning-color-half-full: rgb(138,46,46);
+  --warning-color-green: rgb(78, 209, 89);
   --header-height: 50px;
   --main-font: 'Source Code Pro', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -300,10 +302,27 @@ body input {
   padding: 10px;
 }
 
+#alert-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  z-index: 1000;
+}
+
+
 .welcomePage {
   width: calc(100% - 40px);
   margin: 20px;
 }
+
+.welcome-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center
+}
+
 
 .welcomecontainer {
   display: flex;
@@ -326,9 +345,38 @@ body input {
   flex: 1;
 }
 
+.alert-box {
+  border: var(--warning-color) 1px solid;
+  border-radius: 5px;
+  padding: 15px;
+  flex: 1;
+}
+
+.alert-notification {
+  position: fixed;
+  top: 22px;
+  right: 20px;
+  padding: 15px 25px;
+  border: 2px solid var(--warning-color);
+  background-color: var(--warning-color-half-full);
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.alert-notification.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
 #recent-incidents {
   cursor: pointer;
 }
+
 
 .welcomeheader {
   display: flex;
@@ -339,6 +387,29 @@ body input {
   font-weight: 300;
   margin-top: 5px;
   margin-bottom: 15px;
+}
+
+.shift-summary-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.createincident {
+  border: var(--accent-color) 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  transition: border 100ms linear;
+  background-color: transparent;
+  color: white;
+}
+
+
+.createincident:hover {
+  border: var(--second-accent-color) 1px solid;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .welcomeheader .subtext {
@@ -888,15 +959,15 @@ img {
 
 .overlay .customizationLink {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
+  bottom: 0px;
+  left: 5px;
   color: var(--second-accent-color);
-  font-size: 16px;
-  font-weight: 400;
-  font-family: monospace;
-  padding: 2px;
   pointer-events: all;
-  background-color: var(--background-color);
+}
+
+.overlay .customizationLink:hover .icon path,
+.overlay .customizationLink:focus  .icon path{
+  color: var(--second-accent-color);
 }
 
 .calloutPage .informationLabelContainer {
@@ -1019,4 +1090,11 @@ img {
 
 .tenCodesPage .item:not(:first-child) {
   border-top: 2px solid var(--second-accent-color-half); /* Customize color variable */
+}
+
+
+.off-duty {
+  opacity: 0.5; /* Makes the content look greyed out */
+  cursor: not-allowed;
+  pointer-events: none; /* Prevents interaction with the content */
 }

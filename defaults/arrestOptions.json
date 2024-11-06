@@ -3,92 +3,124 @@
     "name": "Misdemeanor Traffic",
     "charges": [
       {
-        "name": "Driving On A Suspended License",
-        "minFine": 500,
+        "name": "(M) VC 2800.1 Evading a police officer",
+        "minFine": 100,
         "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Driving Without License",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Driving With License Expired 1yr+",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Refusal To Sign Traffic Summons",
-        "minFine": 0,
-        "maxFine": 0,
-        "minMonths": 0,
-        "maxMonths": 0,
-        "probation": 0
-      },
-      {
-        "name": "Leaving The Scene Of An Accident",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Driving On The Wrong Side Of The Road",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
+        "minMonths": 1,
         "maxMonths": 12,
-        "probation": 0.4
+        "probation": 0.6
       },
       {
-        "name": "Reckless Driving / Speed (30+ MPH)",
+        "name": "(M) VC 2800.2 Reckless evading",
+        "minFine": 500,
+        "maxFine": 1000,
+        "minMonths": 6,
+        "maxMonths": 12,
+        "probation": 0.5
+      },
+      {
+        "name": "(M) VC 2800.3 Evading a police officer causing injury or death",
+        "minFine": 2000,
+        "maxFine": 10000,
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.6
+      },
+      {
+        "name": "(M) VC 2800.4 Evading a police officer by driving in opposite direction of traffic",
         "minFine": 145,
         "maxFine": 1000,
-        "minMonths": 0,
+        "minMonths": 1,
         "maxMonths": 3,
+        "probation": 0.5
+      },
+      {
+        "name": "(M) VC 10851(a) Driving or taking a vehicle without consent (Joyriding)",
+        "minFine": 1000,
+        "maxFine": 5000,
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.5
+      },
+      {
+        "name": "(M) VC 12500(a) Driving without a license",
+        "minFine": 100,
+        "maxFine": 1000,
+        "minMonths": 1,
+        "maxMonths": 6,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) VC 12951 Failure to present drivers license",
+        "minFine": 100,
+        "maxFine": 1000,
+        "minMonths": 1,
+        "maxMonths": 6,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) VC 14601.1(a) Driving on a suspended license",
+        "minFine": 100,
+        "maxFine": 1000,
+        "minMonths": 1,
+        "maxMonths": 6,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) VC 16401.4 Driving on a suspended or revoked license causing injury",
+        "minFine": 100,
+        "maxFine": 1000,
+        "minMonths": 1,
+        "maxMonths": 6,
         "probation": 0.4
       },
       {
-        "name": "Street Racing / Speed Contest",
-        "minFine": 500,
+        "name": "(M) VC 20002a Hit and run",
+        "minFine": 100,
         "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 3,
-        "probation": 0.4
+        "minMonths": 1,
+        "maxMonths": 6,
+        "probation": 0.6
       },
       {
-        "name": "Fleeing Or Attempt To Elude LEO",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
+        "name": "(M) VC 20002a Hit and run causing injury or death",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 6,
         "maxMonths": 12,
         "probation": 0.4
       },
       {
-        "name": "Driving Under The Influence",
-        "minFine": 390,
+        "name": "(M) VC 23103 Reckless driving",
+        "minFine": 100,
         "maxFine": 1000,
         "minMonths": 0,
-        "maxMonths": 12,
-        "probation": 0.4
+        "maxMonths": 3,
+        "probation": 0.8
       },
       {
-        "name": "Failure To Submit To Field Sobriety Test",
-        "minFine": 390,
+        "name": "(M) VC 23104 Reckless driving causing injury",
+        "minFine": 100,
+        "maxFine": 1000,
+        "minMonths": 1,
+        "maxMonths": 6,
+        "probation": 0.5
+      },
+      {
+        "name": "(M) VC 23105 Reckless driving causing serious injury",
+        "minFine": 100,
+        "maxFine": 1000,
+        "minMonths": 1,
+        "maxMonths": 6,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) VC 23109 Speed contest",
+        "minFine": 355,
         "maxFine": 1000,
         "minMonths": 0,
-        "maxMonths": 9,
-        "probation": 0.4
+        "maxMonths": 3,
+        "probation": 0.8
       }
     ]
   },
@@ -96,36 +128,153 @@
     "name": "Felony Traffic",
     "charges": [
       {
-        "name": "Fleeing Or Attempt To Elude LEO Causing Injury or Death",
-        "minFine": 2000,
+        "name": "(F) VC 2800.2 Felony reckless evading",
+        "minFine": 1000,
         "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 120,
-        "probation": 0.4
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.5
       },
       {
-        "name": "Leaving The Scene Of An Accident Causing Injury Or Death",
+        "name": "(F) VC 2800.3 Evading an officer causing injury or death",
         "minFine": 2000,
         "maxFine": 10000,
-        "minMonths": 3,
+        "minMonths": 36,
+        "maxMonths": 84,
+        "probation": 0.2
+      },
+      {
+        "name": "(F) VC 10851(a) Driving or taking a vehicle without consent (joyriding)",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 48,
+        "probation": 0.6
+      },
+      {
+        "name": "(F) VC 20001 Felony Hit and Run",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 24,
         "maxMonths": 48,
         "probation": 0.4
       },
       {
-        "name": "Street Racing / Speed Contest Causing Injury or Death",
-        "minFine": 2000,
+        "name": "(F) VC 23105 Reckless driving causing serious injury",
+        "minFine": 1000,
         "maxFine": 10000,
         "minMonths": 12,
-        "maxMonths": 120,
+        "maxMonths": 36,
+        "probation": 0.4
+      }
+    ]
+  },
+  {
+    "name": "DWI / DUI",
+    "charges": [
+      {
+        "name": "(M) VC 23152(a) DUI of Alcohol",
+        "minFine": 390,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) VC 23152(b) DUI based on BAC 0.08% or greater",
+        "minFine": 390,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) VC 23152(c) Driving while addicted to drugs",
+        "minFine": 390,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) VC 23152(d) DUI with a commercial drivers license",
+        "minFine": 390,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.6
+      },
+      {
+        "name": "(M) VC 23152(e) DUI by Uber, Lyft, Taxi or Limo drivers",
+        "minFine": 390,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.6
+      },
+      {
+        "name": "(M) VC 23152(f) DUI of Drugs",
+        "minFine": 390,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.6
+      },
+      {
+        "name": "(M) VC 23152(g) DUI of both drugs and alcohol",
+        "minFine": 390,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
         "probation": 0.4
       },
       {
-        "name": "Driving Under The Influence Causing Injury Or Death",
+        "name": "(M) VC 23153 DUI causing injury",
+        "minFine": 1000,
+        "maxFine": 5000,
+        "minMonths": 6,
+        "maxMonths": 12,
+        "probation": 0.4
+      },
+      {
+        "name": "(F) VC 23153 Felony DUI causing injury",
         "minFine": 1000,
         "maxFine": 5000,
         "minMonths": 12,
         "maxMonths": 48,
         "probation": 0.4
+      },
+      {
+        "name": "(E) VC 23578 Excessive BAC over 0.15%",
+        "minFine": 100,
+        "maxFine": 500,
+        "minMonths": 0,
+        "maxMonths": 0,
+        "probation": 0.0
+      },
+      {
+        "name": "(E) VC 23578 Refusal to submit to test",
+        "minFine": 100,
+        "maxFine": 500,
+        "minMonths": 0,
+        "maxMonths": 0,
+        "probation": 0.0
+      },
+      {
+        "name": "(E) VC 23582 DUI penalty for excessive speeds/reckless driving",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 0,
+        "maxMonths": 2,
+        "probation": 0.3
+      },
+      {
+        "name": "(E) VC 23612 DUI Chemical test refusal",
+        "minFine": 0,
+        "maxFine": 100,
+        "minMonths": 0,
+        "maxMonths": 0,
+        "probation": 0.0
       }
     ]
   },
@@ -133,68 +282,180 @@
     "name": "Misdemeanor Firearms / Weapons / Explosives",
     "charges": [
       {
-        "name": "Brandishing Firearm Or Deadly Weapon",
-        "minFine": 500,
-        "maxFine": 1000,
+        "name": "(M) PC 171b Unauthorized possession of weapons in public building",
+        "minFine": 0,
+        "maxFine": 0, 
+        "minMonths": 6,
+        "maxMonths": 12,
+        "probation": 0.5
+      },
+      {
+        "name": "(M) PC 246.3 Negligent discharge of a firearm",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) PC 417 Brandishing a weapon or firearm",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.6
+      },
+      {
+        "name": "(M) PC 417.6 Brandishing with serious bodily injury",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.5
+      },
+      {
+        "name": "(M) PC 626.10 Weapon on school grounds",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) PC 16590 Possession of a prohibited weapon/accessory",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.6
+      },
+      {
+        "name": "(M) PC 17500 Possession of a deadly weapon with intent to assault",
+        "minFine": 100,
+        "maxFine": 1000, 
         "minMonths": 1,
         "maxMonths": 6,
-        "probation": 0.4
+        "probation": 0.3
       },
       {
-        "name": "Negligent Discharge Of A Firearm",
-        "minFine": 500,
-        "maxFine": 1000,
+        "name": "(M) PC 18710 Possession of a destructive device",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) PC 21310 Carrying a concealed dagger",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) PC 21510 Possession of a switchblade",
+        "minFine": 100,
+        "maxFine": 1000, 
         "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) PC 21810 Possession of Brass Knuckles",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) PC 22210 Possession of a baton",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) PC 22610 Felon in possession of a stun gun",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) PC 24310 Possession of a camoflauged firearm container",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.5
+      },
+      {
+        "name": "(M) PC 24610 Possession of an undetectable firearm",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) PC 25400 Carrying a concealed firearm without a CCW",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 3,
+        "maxMonths": 12,
+        "probation": 0.6
+      },
+      {
+        "name": "(M) PC 25610 Carrying an unsecure or loaded firearm in a vehicle",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 3,
+        "maxMonths": 12,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) PC 25850 Carrying a loaded firearm",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 3,
         "maxMonths": 12,
         "probation": 0.4
       },
       {
-        "name": "Concealment Of Firearm Without CCW Permit",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
+        "name": "(M) PC 26350 Open carry of unloaded firearm",
+        "minFine": 100,
+        "maxFine": 1000, 
+        "minMonths": 3,
         "maxMonths": 12,
-        "probation": 0.4
+        "probation": 0.3
       },
       {
-        "name": "Unlawful Transport Of A Firearm",
-        "minFine": 500,
-        "maxFine": 1000,
+        "name": "(M) PC 30305(a)(1) Felon in possession of ammunition",
+        "minFine": 100,
+        "maxFine": 1000, 
         "minMonths": 0,
         "maxMonths": 12,
-        "probation": 0.4
+        "probation": 0.3
       },
       {
-        "name": "Shooting From Vehicle Or Roadway",
-        "minFine": 500,
-        "maxFine": 1000,
+        "name": "(M) PC 32900 Possession of a bump stock",
+        "minFine": 100,
+        "maxFine": 1000, 
         "minMonths": 0,
         "maxMonths": 12,
-        "probation": 0.4
+        "probation": 0.3
       },
       {
-        "name": "Illegal Accessory To Firearm",
-        "minFine": 500,
-        "maxFine": 1000,
+        "name": "(M) HS 12085 Making, Possessing or Transporting Explosives",
+        "minFine": 100,
+        "maxFine": 1000, 
         "minMonths": 0,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Unlawful Possession Of Firearm",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of Stolen Firearm",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 12,
-        "probation": 0.4
+        "maxMonths": 6,
+        "probation": 0.3
       }
     ]
   },
@@ -202,52 +463,153 @@
     "name": "Felony Firearms / Weapons / Explosives",
     "charges": [
       {
-        "name": "Discharge Of Firearm With Intent To Cause Injury Or Death",
+        "name": "(F) PC 171b Possession of weapon in public building",
         "minFine": 1000,
         "maxFine": 10000,
         "minMonths": 16,
         "maxMonths": 36,
-        "probation": 0.4
+        "probation": 0.3
       },
       {
-        "name": "Possession Of An Explosive Device",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 0,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Attempt To Detonate Explosive Device",
+        "name": "(F) PC 246.3 Negligent discharge of firearm",
         "minFine": 1000,
         "maxFine": 10000,
         "minMonths": 16,
         "maxMonths": 36,
-        "probation": 0.4
+        "probation": 0.6
       },
       {
-        "name": "Possession Of Firearm Or Ammunition By Felon",
+        "name": "(F) PC 417.6 Brandishing a firearm with serious bodily injury",
         "minFine": 1000,
         "maxFine": 10000,
-        "minMonths": 16,
+        "minMonths": 12,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 626.10 Weapons on school grounds",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 12,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 16590 Possession of a prohibited weapon",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 12,
         "maxMonths": 36,
         "probation": 0.4
       },
       {
-        "name": "Possession Of Firearm In Commission Of Felony",
+        "name": "(F) PC 18710 Possession of a destructive device",
         "minFine": 1000,
         "maxFine": 10000,
-        "minMonths": 0,
-        "maxMonths": 12,
-        "probation": 0.4
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.2
       },
       {
-        "name": "Unlawful Possession Of Automatic Weapon",
+        "name": "(F) PC 18720 Possession of destructive device materials",
         "minFine": 1000,
         "maxFine": 10000,
-        "minMonths": 48,
-        "maxMonths": 96,
-        "probation": 0.4
+        "minMonths": 16,
+        "maxMonths": 48,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 23900 Altering a firearms identification information",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.5
+      },
+      {
+        "name": "(F) PC 24310 Possession of a camoflauged firearm container",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 24610 Possession of an undetectable firearm",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 25400 Carrying a concealed weapon without a valid CCW",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 29800(a)(1) Felon in possession of a firearm",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 30305(a)(1) Felon in possession of ammunition",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.5
+      },
+      {
+        "name": "(F) PC 33410 Possession of a suppressor or silencer",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      }
+    ]
+  },
+  {
+    "name": "Firearms / Weapons / Explosives Enhancements",
+    "charges": [
+      {
+        "name": "(E) PC 12022.3 Use of a firearm in the commission of a sex crime",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 12,
+        "maxMonths": 120,
+        "probation": 0.2
+      },
+      {
+        "name": "(E) PC 12022.4 Aiding or abetting a felony with a firearm",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 12,
+        "maxMonths": 36,
+        "probation": 0.2
+      },
+      {
+        "name": "(E) PC 12022.5 Personal use of a firearm during the commission of a felony",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 12,
+        "maxMonths": 120,
+        "probation": 0.2
+      },
+      {
+        "name": "(E) PC 12022.55 Shooting from a vehicle",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 60,
+        "maxMonths": 120,
+        "probation": 0.3
       }
     ]
   },
@@ -255,68 +617,68 @@
     "name": "Battery",
     "charges": [
       {
-        "name": "Simple Battery",
-        "minFine": 1000,
+        "name": "(M) PC 242 Simple battery",
+        "minFine": 0,
         "maxFine": 2000,
         "minMonths": 0,
         "maxMonths": 6,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) PC 243(c)(2) Battery on a peace officer",
+        "minFine": 0,
+        "maxFine": 10000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 243(c)(2) Felony battery on a peace officer",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) PC 243(d) Battery causing serious bodily injury",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
         "probation": 0.4
       },
       {
-        "name": "Aggravated Battery",
+        "name": "(F) PC 243(d) Aggravated battery causing serious bodily injury",
         "minFine": 1000,
         "maxFine": 10000,
         "minMonths": 12,
         "maxMonths": 48,
-        "probation": 0.4
+        "probation": 0.3
       },
       {
-        "name": "Aggravated Battery With Deadly Weapon",
-        "minFine": 5000,
+        "name": "(M) PC 243(e)(1) Domestic battery",
+        "minFine": 0,
+        "maxFine": 2000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.5
+      },
+      {
+        "name": "(M) PC 243.4 Sexual battery",
+        "minFine": 0,
+        "maxFine": 3000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 243.4 Aggravated sexual battery",
+        "minFine": 1000,
         "maxFine": 10000,
         "minMonths": 24,
-        "maxMonths": 48,
-        "probation": 0.4
-      },
-      {
-        "name": "Battery on LEO",
-        "minFine": 5000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 48,
-        "probation": 0.4
-      },
-      {
-        "name": "Battery On Fire / EMS",
-        "minFine": 5000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 48,
-        "probation": 0.4
-      },
-      {
-        "name": "Malicious Wounding",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 48,
-        "probation": 0.4
-      },
-      {
-        "name": "Mayhem",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 96,
-        "probation": 0.4
-      },
-      {
-        "name": "Sexual Battery",
-        "minFine": 5000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 48,
-        "probation": 0.4
+        "maxMonths": 108,
+        "probation": 0.2
       }
     ]
   },
@@ -324,113 +686,270 @@
     "name": "Assault",
     "charges": [
       {
-        "name": "Simple Assault",
-        "minFine": 500,
+        "name": "(M) PC 240 Simple assault",
+        "minFine": 0,
         "maxFine": 1000,
         "minMonths": 0,
         "maxMonths": 6,
-        "probation": 0.4
+        "probation": 0.8
       },
       {
-        "name": "Aggravated Assault",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 48,
-        "probation": 0.4
-      },
-      {
-        "name": "Aggravated Assault With Deadly Weapon",
-        "minFine": 5000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 48,
-        "probation": 0.4
-      },
-      {
-        "name": "Domestic Assault",
-        "minFine": 1000,
-        "maxFine": 6000,
-        "minMonths": 12,
-        "maxMonths": 48,
-        "probation": 0.4
-      },
-      {
-        "name": "Assault on LEO",
-        "minFine": 1000,
+        "name": "(M) 241 Assault on a police officer",
+        "minFine": 0,
         "maxFine": 2000,
         "minMonths": 0,
         "maxMonths": 12,
         "probation": 0.4
       },
       {
-        "name": "Assault On Fire / EMS",
-        "minFine": 1000,
-        "maxFine": 2000,
+        "name": "(M) PC 245(a)(1) Aggravated assault",
+        "minFine": 0,
+        "maxFine": 1000,
         "minMonths": 0,
         "maxMonths": 12,
-        "probation": 0.4
+        "probation": 0.3
       },
       {
-        "name": "Vehicular Assault",
+        "name": "(F) PC 245(a)(1) Assault with a deadly weapon",
         "minFine": 1000,
         "maxFine": 10000,
         "minMonths": 12,
         "maxMonths": 48,
-        "probation": 0.4
+        "probation": 0.2
       },
       {
-        "name": "Sexual Assault",
-        "minFine": 1000,
-        "maxFine": 3000,
+        "name": "(M) PC 245(a)(2) Assault with a firearm",
+        "minFine": 0,
+        "maxFine": 1000,
         "minMonths": 6,
         "maxMonths": 12,
         "probation": 0.4
+      },
+      {
+        "name": "(F) PC 245(a)(2) Aggravated assault with a firearm",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 24,
+        "maxMonths": 48,
+        "probation": 0.2
+      },
+      {
+        "name": "(F) PC 245(c) Assault with a deadly weapon on a police officer",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 36,
+        "maxMonths": 60,
+        "probation": 0.1
       }
     ]
   },
   {
-    "name": "Resisting / Obstruction",
+    "name": "Resisting/Obstruction",
     "charges": [
       {
-        "name": "Resisting Arrest",
-        "minFine": 500,
+        "name": "(M) PC 135 Destroying or Concealing Evidence",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) PC 148 Resisting arrest",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) PC 148 Obstruction of justice",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) PC 148 interfering with medical personnel",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) PC 148 interfering with a police investigation",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) PC 148.9 Providing false identification to a police officer",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.8
+      }
+    ]
+  },
+  {
+    "name": "Drug and Drug Paraphernalia Possession",
+    "charges": [
+      {
+        "name": "(M) HS 11162.5 Possession of counterfeit prescription blanks",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.5
+      },
+      {
+        "name": "(F) HS 11162.5 Possession of counterfeit prescription blanks",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.4
+      },
+      {
+        "name": "(M) HS 11350(a) Possession of a controlled substance/narcotic",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.6
+      },
+      {
+        "name": "(F) HS 11351 Possession of a controlled substance/narcotic with intent to sell",
+        "minFine": 10000,
+        "maxFine": 20000,
+        "minMonths": 24,
+        "maxMonths": 48,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) HS 11352 Sale or transportation of a controlled substance/narcotic",
+        "minFine": 10000,
+        "maxFine": 20000,
+        "minMonths": 36,
+        "maxMonths": 108,
+        "probation": 0.1
+      },
+      {
+        "name": "(M) HS 11357 Possession of marijuana in amount above 28.5 grams",
+        "minFine": 0,
+        "maxFine": 500,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.9
+      },
+      {
+        "name": "(M) HS 11359 Possession of marijuana for sale",
+        "minFine": 100,
+        "maxFine": 500,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.5
+      },
+      {
+        "name": "(M) HS 11364(a) Possession of drug paraphernalia",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.6
+      },
+      {
+        "name": "(M) HS 11368 Forging or altering a prescription",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 6,
+        "maxMonths": 12,
+        "probation": 0.5
+      },
+      {
+        "name": "(F) HS 11368 Forging or altering a prescription",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) HS 11370.1 Possession of a controlled substance/narcotic while armed",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 48,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) HS 11375(b)(2) Possession of Sedatives or Benzodiazepines",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.4
+      },
+      {
+        "name": "(M) HS 11375(b)(1) Possession of Sedatives or Benzodiazephines for sale",
+        "minFine": 0,
         "maxFine": 1000,
         "minMonths": 0,
         "maxMonths": 12,
         "probation": 0.4
       },
       {
-        "name": "Failure To Comply With A Lawful Order",
-        "minFine": 100,
+        "name": "(F) HS 11375(b)(1) Trafficking Sedatives or Benzodiazephines",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) HS 11377(a) Possession of methamphetamine",
+        "minFine": 0,
         "maxFine": 1000,
         "minMonths": 0,
-        "maxMonths": 6,
+        "maxMonths": 12,
         "probation": 0.4
       },
       {
-        "name": "Providing False Information",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
+        "name": "(F) HS 11378 Possession of methamphetamine for sale",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
         "probation": 0.4
       },
       {
-        "name": "Obstructing LEO",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 11,
-        "probation": 0.4
+        "name": "(F) HS 11379 Transportation or sale of methamphetamine",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 48,
+        "probation": 0.1
       },
       {
-        "name": "Obstructing Or Hindering Of Investigation",
-        "minFine": 500,
+        "name": "(F) HS 11379.6 Manufacture of a controlled substance/narcotic",
+        "minFine": 10000,
+        "maxFine": 50000,
+        "minMonths": 36,
+        "maxMonths": 84,
+        "probation": 0.1
+      },
+      {
+        "name": "(M) HS 11550 Under the influence of a controlled substance/narcotic",
+        "minFine": 0,
         "maxFine": 1000,
         "minMonths": 0,
-        "maxMonths": 11,
-        "probation": 0.4
+        "maxMonths": 12,
+        "probation": 0.3
       }
     ]
   },
@@ -438,185 +957,36 @@
     "name": "Property",
     "charges": [
       {
-        "name": "Destruction Of Public Property",
-        "minFine": 100000,
-        "maxFine": 250000,
-        "minMonths": 12,
-        "maxMonths": 120,
-        "probation": 0.4
-      },
-      {
-        "name": "Destruction Of Private Property",
-        "minFine": 1000,
-        "maxFine": 50000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Vandalism On Public Property",
-        "minFine": 100000,
-        "maxFine": 250000,
-        "minMonths": 12,
-        "maxMonths": 120,
-        "probation": 0.4
-      },
-      {
-        "name": "Vandalism On Private Property",
-        "minFine": 1000,
-        "maxFine": 50000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Criminal Trespassing",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Prowling",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      }
-    ]
-  },
-  {
-    "name": "Drug Paraphernalia / Narcotics",
-    "charges": [
-      {
-        "name": "Possession of Drug Paraphernalia",
-        "minFine": 500,
+        "name": "(M) PC 594 Vandalism under $400",
+        "minFine": 0,
         "maxFine": 1000,
         "minMonths": 0,
         "maxMonths": 12,
-        "probation": 0.4
+        "probation": 0.7
       },
       {
-        "name": "Trafficking Narcotics",
-        "minFine": 20000,
-        "maxFine": 40000,
-        "minMonths": 36,
-        "maxMonths": 96,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of Prescription Pills",
-        "minFine": 500,
+        "name": "(F) PC 594 Vandalism over $400",
+        "minFine": 0,
         "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of Marijuana",
-        "minFine": 100,
-        "maxFine": 500,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of Cocaine",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of Methamphetamine",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 36,
-        "maxMonths": 48,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of Heroin",
-        "minFine": 5000,
-        "maxFine": 20000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of PCP",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of LSD",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 36,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of Ecstasy",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 36,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of Anabolic Steroids",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of Morphine",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of Fentanyl",
-        "minFine": 1000,
-        "maxFine": 20000,
-        "minMonths": 6,
-        "maxMonths": 24,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of Opium",
-        "minFine": 5000,
-        "maxFine": 20000,
         "minMonths": 16,
         "maxMonths": 36,
-        "probation": 0.4
+        "probation": 0.3
       },
       {
-        "name": "Possession Of Oxycontin",
-        "minFine": 500,
+        "name": "(M) PC 555 passing",
+        "minFine": 0,
         "maxFine": 1000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.7
       },
       {
-        "name": "Possession Of Rohypnol (Roofies)",
-        "minFine": 5000,
-        "maxFine": 20000,
+        "name": "(F) PC 601 Aggravated trespassing",
+        "minFine": 1000,
+        "maxFine": 10000,
         "minMonths": 16,
         "maxMonths": 36,
-        "probation": 0.4
+        "probation": 0.2
       }
     ]
   },
@@ -624,68 +994,108 @@
     "name": "Robbery / Theft",
     "charges": [
       {
-        "name": "Home Invasion",
-        "minFine": 3000,
-        "maxFine": 5000,
-        "minMonths": 180,
-        "maxMonths": 240,
-        "probation": 0.4
+        "name": "(M) PC 484(a) Petty theft",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.6
       },
       {
-        "name": "Robbery",
-        "minFine": 3000,
+        "name": "(M) PC 487 Grand theft",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.5
+      },
+      {
+        "name": "(F) PC 487 Grand Theft",
+        "minFine": 1000,
         "maxFine": 10000,
-        "minMonths": 60,
-        "maxMonths": 108,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) PC 487(c) Grand Theft Person",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.5
+      },
+      {
+        "name": "(F) PC 487(c) Grand Theft Person",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 487(d)(1) Grand Theft Auto",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 487(d)(2) Grand Theft Firearm",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 211 First degree robbery",
+        "minFine": 5000,
+        "maxFine": 10000,
+        "minMonths": 36,
+        "maxMonths": 72,
+        "probation": 0.1
+      },
+      {
+        "name": "(F) PC 211 Second degree robbery",
+        "minFine": 5000,
+        "maxFine": 10000,
+        "minMonths": 24,
+        "maxMonths": 60,
         "probation": 0.4
       },
       {
-        "name": "Attempted Robbery",
-        "minFine": 3000,
-        "maxFine": 5000,
+        "name": "(F) PC 215 Carjacking",
+        "minFine": 5000,
+        "maxFine": 10000,
+        "minMonths": 36,
+        "maxMonths": 108,
+        "probation": 0.1
+      },
+      {
+        "name": "(F) PC 459 First degree burglary",
+        "minFine": 5000,
+        "maxFine": 10000,
+        "minMonths": 24,
+        "maxMonths": 60,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 549 Second degree burglary",
+        "minFine": 5000,
+        "maxFine": 10000,
         "minMonths": 16,
         "maxMonths": 36,
         "probation": 0.4
       },
       {
-        "name": "Armed Robbery",
-        "minFine": 3000,
-        "maxFine": 10000,
-        "minMonths": 180,
-        "maxMonths": 240,
-        "probation": 0.4
-      },
-      {
-        "name": "Attempted Armed Robbery",
-        "minFine": 3000,
-        "maxFine": 10000,
-        "minMonths": 60,
-        "maxMonths": 108,
-        "probation": 0.4
-      },
-      {
-        "name": "Carjacking",
-        "minFine": 3000,
-        "maxFine": 10000,
-        "minMonths": 60,
-        "maxMonths": 108,
-        "probation": 0.4
-      },
-      {
-        "name": "Grand Theft Auto",
-        "minFine": 3000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 36,
-        "probation": 0.4
-      },
-      {
-        "name": "Burglary",
-        "minFine": 3000,
-        "maxFine": 10000,
-        "minMonths": 36,
-        "maxMonths": 72,
-        "probation": 0.4
+        "name": "(M) PC 459.5 Shoplifting",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.8
       }
     ]
   },
@@ -693,240 +1103,272 @@
     "name": "Stolen Possession",
     "charges": [
       {
-        "name": "Possession Of A Stolen Vehicle",
+        "name": "(M) PC 496 Possession of stolen property",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.6
+      },
+      {
+        "name": "(F) PC 496 Possession of stolen property",
         "minFine": 1000,
-        "maxFine": 5000,
-        "minMonths": 12,
+        "maxFine": 10000,
+        "minMonths": 16,
         "maxMonths": 36,
-        "probation": 0.4
+        "probation": 0.3
       },
       {
-        "name": "Possession Of A Stolen Drivers License",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of A Stolen License Plate",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Possession Of A Stolen Debit / Credit Card",
+        "name": "(F) PC 496(d) Possession of a stolen vehicle",
         "minFine": 1000,
-        "maxFine": 5000,
-        "minMonths": 12,
+        "maxFine": 10000,
+        "minMonths": 16,
         "maxMonths": 36,
-        "probation": 0.4
+        "probation": 0.1
       },
       {
-        "name": "Possession Of Stolen Property",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
+        "name": "(F) PC 484(e) Possession of stolen credit card information",
+        "minFine": 1000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.3
       }
     ]
   },
   {
-    "name": "Court Related",
+    "name": "Other Possession",
     "charges": [
       {
-        "name": "Violation Of Probation",
-        "minFine": 100,
-        "maxFine": 250000,
-        "minMonths": 0,
-        "maxMonths": 240,
-        "probation": 0.4
+        "name": "(F) PC 311.11 Possession of child pornography",
+        "minFine": 1000,
+        "maxFine": 2500,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.2
       },
       {
-        "name": "Violation of Parole",
-        "minFine": 100,
-        "maxFine": 250000,
-        "minMonths": 0,
-        "maxMonths": 240,
-        "probation": 0.4
-      },
-      {
-        "name": "Failure To Register As Sex Offender",
-        "minFine": 100,
+        "name": "(F) PC 466 Possession of burglary tools",
+        "minFine": 0,
         "maxFine": 1000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.7
       },
       {
-        "name": "Violation Of Protective Order",
-        "minFine": 100,
+        "name": "(M) PC 470(b) Possession of a counterfeit ID",
+        "minFine": 0,
         "maxFine": 1000,
-        "minMonths": 6,
+        "minMonths": 0,
         "maxMonths": 12,
-        "probation": 0.4
-      }
-    ]
-  },
-  {
-    "name": "Custody",
-    "charges": [
+        "probation": 0.3
+      },
       {
-        "name": "Escape Custody",
+        "name": "(M) PC 475 Possession of counterfeit money or checks",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.7
+      },
+      {
+        "name": "(F) PC 484(i) Possession of counterfeit credit cards",
         "minFine": 5000,
         "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 72,
-        "probation": 0.4
-      },
-      {
-        "name": "Aid In Escape Of Custody",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Attempt To Escape Custody",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Escape Jail",
-        "minFine": 5000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 72,
-        "probation": 0.4
-      },
-      {
-        "name": "Aid In Escape Of Jail",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Attempt To Escape Jail",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 6,
-        "maxMonths": 12,
+        "minMonths": 16,
+        "maxMonths": 36,
         "probation": 0.4
       }
     ]
   },
   {
-    "name": "Manslaughter / Homicide",
+    "name": "Custody and Escape",
     "charges": [
       {
-        "name": "1st Degree Murder",
-        "minFine": 1000,
+        "name": "(M) PC 4532 Escape from custody",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 1,
+        "maxMonths": 12,
+        "probation": 0.0
+      },
+      {
+        "name": "(F) PC 4532 Escape from custody",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 16,
+        "maxMonths": 36,
+        "probation": 0.0
+      },
+      {
+        "name": "(M) PC 4532 Escape from custody with violence",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 12,
+        "maxMonths": 72,
+        "probation": 0.0
+      },
+      {
+        "name": "(F) PC 4532 Escape from custody with violence",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 12,
+        "maxMonths": 72,
+        "probation": 0.0
+      }
+    ]
+  },
+  {
+    "name": "Homicide",
+    "charges": [
+      {
+        "name": "(F) PC 191.5(a) Gross vehicular manslaughter while intoxicated",
+        "minFine": 5000,
         "maxFine": 10000,
+        "minMonths": 48,
+        "maxMonths": 120,
+        "probation": 0.1
+      },
+      {
+        "name": "(F) PC 191.5(b) Vehicular manslaughter while intoxicated",
+        "minFine": 5000,
+        "maxFine": 10000,
+        "minMonths": 16,
+        "maxMonths": 48,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 192 Voluntary manslaughter",
+        "minFine": 0,
+        "maxFine": 10000,
+        "minMonths": 12,
+        "maxMonths":134,
+        "probation": 0.2
+      },
+      {
+        "name": "(F) PC 192(b) Involuntary manslaughter",
+        "minFine": 0,
+        "maxFine": 10000,
+        "minMonths": 24,
+        "maxMonths": 48,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) PC 192(c) Vehicular manslaughter",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 192(c) Vehicular manslaughter with gross negligence",
+        "minFine": 5000,
+        "maxFine": 10000,
+        "minMonths": 24,
+        "maxMonths": 72,
+        "probation": 0.3
+      },
+      {
+        "name": "(F) PC 187 First degree murder",
+        "minFine": 0,
+        "maxFine": 0,
         "minMonths": 300,
         "maxMonths": null,
-        "probation": 0
+        "probation": 0.0
       },
       {
-        "name": "2nd Degree Murder",
-        "minFine": 1000,
-        "maxFine": 10000,
+        "name": "(F) PC 187 First degree murder of a peace officer",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 300,
+        "maxMonths": null,
+        "probation": 0.0
+      },
+      {
+        "name": "(F) PC 187 Second degree murder",
+        "minFine": 0,
+        "maxFine": 0,
         "minMonths": 180,
         "maxMonths": null,
-        "probation": 0
+        "probation": 0.0
       },
       {
-        "name": "Attempted Murder 1st Degree Murder",
-        "minFine": 1000,
-        "maxFine": 10000,
+        "name": "(F) PC 187 Second degree murder of a peace officer",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 180,
+        "maxMonths": null,
+        "probation": 0.0
+      },
+      {
+        "name": "(F) PC 664/187(a) Attempted first degree murder",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 180,
+        "maxMonths": null,
+        "probation": 0.0
+      },
+      {
+        "name": "(F) PC 664/187(a) Attempted first degree murder of a peace officer",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 300,
+        "maxMonths": null,
+        "probation": 0.0
+      },
+      {
+        "name": "(F) PC 664/187(a) Attempted second degree murder",
+        "minFine": 0,
+        "maxFine": 0,
         "minMonths": 60,
         "maxMonths": 108,
-        "probation": 0.2
+        "probation": 0.0
       },
       {
-        "name": "Attempted Murder 2nd Degree Murder",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 24,
-        "maxMonths": 48,
-        "probation": 0.2
-      },
-      {
-        "name": "Voluntary Manslaughter",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 36,
-        "maxMonths": 132,
-        "probation": 0.2
-      },
-      {
-        "name": "Involuntary Manslaughter",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 24,
-        "maxMonths": 48,
-        "probation": 0.2
-      },
-      {
-        "name": "Vehicular Manslaughter",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 12,
-        "maxMonths": 120,
-        "probation": 0.2
+        "name": "(F) PC 664/187(a) Attempted second degree murder of a peace officer",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 180,
+        "maxMonths": 300,
+        "probation": 0.0
       }
     ]
   },
   {
-    "name": "Rape / Kidnapping",
+    "name": "Rape/Kidnapping",
     "charges": [
       {
-        "name": "Rape",
+        "name": "(F) PC 261 Sexual Assault/Rape",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 36,
+        "maxMonths": 156,
+        "probation": 0.0
+      },
+      {
+        "name": "(F) PC 207 Simple kidnapping",
         "minFine": 1000,
         "maxFine": 10000,
         "minMonths": 36,
-        "maxMonths": 156,
-        "probation": 0.2
-      },
-      {
-        "name": "Attempted Rape",
-        "minFine": 1000,
-        "maxFine": 5000,
-        "minMonths": 18,
-        "maxMonths": 48,
-        "probation": 0.2
-      },
-      {
-        "name": "Kidnapping",
-        "minFine": 1000,
-        "maxFine": 5000,
-        "minMonths": 24,
         "maxMonths": 96,
-        "probation": 0.2
+        "probation": 0.3
       },
       {
-        "name": "Attempted Kidnapping",
-        "minFine": 1000,
-        "maxFine": 5000,
-        "minMonths": 12,
-        "maxMonths": 36,
-        "probation": 0.2
-      },
-      {
-        "name": "Aggravated Kidnapping",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 60,
+        "name": "(F) PC 209 Aggravated kidnapping",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 300,
         "maxMonths": null,
         "probation": 0.2
+      },
+      {
+        "name": "(F) PC 209.5 Kidnapping during a carjacking",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 300,
+        "maxMonths": null,
+        "probation": 0.1
       }
     ]
   },
@@ -934,238 +1376,195 @@
     "name": "Arson",
     "charges": [
       {
-        "name": "1st Degree Arson",
-        "minFine": 1000,
-        "maxFine": 10000,
-        "minMonths": 60,
-        "maxMonths": 108,
-        "probation": 0.2
-      },
-      {
-        "name": "2nd Degree Arson",
-        "minFine": 1000,
-        "maxFine": 8000,
-        "minMonths": 36,
-        "maxMonths": 96,
-        "probation": 0.2
-      },
-      {
-        "name": "3rd Degree Arson",
-        "minFine": 1000,
-        "maxFine": 6000,
+        "name": "(F) PC 451 Arson",
+        "minFine": 0,
+        "maxFine": 0,
         "minMonths": 16,
-        "maxMonths": 72,
+        "maxMonths": 108,
+        "probation": 0.1
+      },
+      {
+        "name": "(M) PC 452 Reckless burning",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.5
+      }
+    ]
+  },
+  {
+    "name": "Prostitution/Lewdness",
+    "charges": [
+      {
+        "name": "(M) PC 314 Indecent exposure",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) PC 647(a) Lewd conduct in public",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.9
+      },
+      {
+        "name": "(M) PC 647(b) Solicitation for prostitution",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) PC 647(b) Engaging in prostitution",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.8
+      },
+      {
+        "name": "(M) PC 653.23 Supervising or aiding a prostitute",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 6,
+        "probation": 0.7
+      }
+    ]
+  },
+  {
+    "name": "Public/Other Offenses",
+    "charges": [
+      {
+        "name": "(M/F) PC 31 Aiding and Abetting",
+        "minFine": 0,
+        "maxFine": 0,
+        "minMonths": 0,
+        "maxMonths": 0,
         "probation": 0.3
       },
       {
-        "name": "Attempted 1st Degree Arson",
-        "minFine": 500,
-        "maxFine": 5000,
-        "minMonths": 30,
-        "maxMonths": 54,
-        "probation": 0.4
-      },
-      {
-        "name": "Attempted 2nd Degree Arson",
-        "minFine": 500,
-        "maxFine": 4000,
-        "minMonths": 18,
-        "maxMonths": 48,
-        "probation": 0.4
-      },
-      {
-        "name": "Attempted 3rd Degree Arson",
-        "minFine": 500,
-        "maxFine": 3000,
-        "minMonths": 12,
-        "maxMonths": 36,
-        "probation": 0.4
-      }
-    ]
-  },
-  {
-    "name": "Prostitution / Lewdness",
-    "charges": [
-      {
-        "name": "Soliciting Prostitution",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Engaging In Prostitution",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Loitering With Purpose Of Prostitution",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Public Act of Lewdness",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Indecent Exposure",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      }
-    ]
-  },
-  {
-    "name": "Public / Other Offenses",
-    "charges": [
-      {
-        "name": "Stalking",
-        "minFine": 1000,
-        "maxFine": 5000,
-        "minMonths": 12,
-        "maxMonths": 60,
-        "probation": 0.4
-      },
-      {
-        "name": "Impersonating Law Enforcement",
-        "minFine": 1000,
-        "maxFine": 2000,
-        "minMonths": 6,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Abuse of 911 System",
-        "minFine": 500,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Unlawful Assembly",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Present During A Riot",
-        "minFine": 1000,
-        "maxFine": 2000,
-        "minMonths": 3,
-        "maxMonths": 12,
-        "probation": 0.4
-      },
-      {
-        "name": "Disturbing The Peace",
-        "minFine": 100,
-        "maxFine": 400,
-        "minMonths": 0,
-        "maxMonths": 3,
-        "probation": 0.4
-      },
-      {
-        "name": "Disorderly Conduct",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Harassment",
-        "minFine": 1000,
+        "name": "(F) PC 32 Accessory after the fact",
+        "minFine": 5000,
         "maxFine": 10000,
-        "minMonths": 12,
+        "minMonths": 16,
         "maxMonths": 36,
         "probation": 0.4
       },
       {
-        "name": "Failure To Disperse",
-        "minFine": 100,
+        "name": "(M) PC 148.3 False report of an emergency",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) PC 182 Conspiracy",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) PC 245.6 Hazing",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.7
+      },
+      {
+        "name": "(M) PC 372 Creating or maintaining a public nuisance",
+        "minFine": 0,
         "maxFine": 1000,
         "minMonths": 0,
         "maxMonths": 6,
-        "probation": 0.4
+        "probation": 0.8
       },
       {
-        "name": "Loitering",
-        "minFine": 100,
+        "name": "(M) PC 404.6 Inciting a riot",
+        "minFine": 0,
         "maxFine": 1000,
         "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
+        "maxMonths": 12,
+        "probation": 0.3
       },
       {
-        "name": "Urinating In Public",
-        "minFine": 100,
+        "name": "(M) PC 407 Unlawful assembly",
+        "minFine": 0,
         "maxFine": 1000,
         "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
+        "maxMonths": 12,
+        "probation": 0.3
       },
       {
-        "name": "Public Intoxication",
-        "minFine": 100,
+        "name": "(M) PC 415 Disturbing the peace",
+        "minFine": 0,
         "maxFine": 1000,
         "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
+        "maxMonths": 12,
+        "probation": 0.3
       },
       {
-        "name": "Reckless Endangerment",
-        "minFine": 145,
+        "name": "(M) PC 416 Failure to disperse",
+        "minFine": 0,
         "maxFine": 1000,
         "minMonths": 0,
-        "maxMonths": 3,
-        "probation": 0.4
+        "maxMonths": 12,
+        "probation": 0.3
       },
       {
-        "name": "Wanton Endangerment",
-        "minFine": 100,
-        "maxFine": 1000,
-        "minMonths": 0,
-        "maxMonths": 6,
-        "probation": 0.4
-      },
-      {
-        "name": "Fighting In Public",
-        "minFine": 500,
+        "name": "(M) PC 538(d) Impersonating a police officer",
+        "minFine": 0,
         "maxFine": 2000,
-        "minMonths": 3,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) PC 602 Criminal Trespassing",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.3
+      },
+      {
+        "name": "(M) PC 647(f) Public Intoxication",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
         "maxMonths": 6,
-        "probation": 0.4
+        "probation": 0.8
       },
       {
-        "name": "Accessory After The Fact",
-        "minFine": 1000,
-        "maxFine": 3000,
-        "minMonths": 12,
-        "maxMonths": 36,
-        "probation": 0.4
-      },
+        "name": "(M) PC 647h Loitering to Commit a Crime",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.3
+      }
+    ]
+  },
+  {
+    "name": "Charge Enhancements",
+    "charges": [
       {
-        "name": "Accessory Before The Fact",
-        "minFine": 1000,
-        "maxFine": 3000,
-        "minMonths": 12,
-        "maxMonths": 36,
-        "probation": 0.4
+        "name": "(E) PC 186.22 Involvement in a criminal street gang",
+        "minFine": 0,
+        "maxFine": 1000,
+        "minMonths": 0,
+        "maxMonths": 12,
+        "probation": 0.0
       }
     ]
   }
