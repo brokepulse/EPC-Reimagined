@@ -181,14 +181,17 @@ function hideAllOtherScreens() {
 }
 
 
-// Error display functions
 function showError(message) {
-  const errorBox = document.getElementById('errorBox');
-  errorBox.innerText = message;
+  const errorBox = document.getElementById('error-box');
+  const errorMessage = document.getElementById('error-message');
+
+  errorMessage.textContent = message;
   errorBox.classList.remove('hidden');
 }
+
 function hideError() {
-  document.getElementById('errorBox').classList.add('hidden');
+  const errorBox = document.getElementById('error-box');
+  errorBox.classList.add('hidden');
 }
 
 // Screen toggles between login and profile creation

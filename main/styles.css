@@ -37,17 +37,12 @@
   background-color: rgba(255, 72, 72, 0.24); /* Light red background */
   border: 1px solid var(--warning-color); /* Red border */
   color: var(--warning-color); /* Red text */
-  padding: 10px;
   margin-bottom: 15px;
   text-align: center;
   font-weight: bold;
   border-radius: 5px;
+  height: var(--header-height);
 }
-
-.hidden {
-  display: none;
-}
-
 
 /* Login Form Layout */
 #login-screen, #create-profile-screen {
